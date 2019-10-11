@@ -1,0 +1,12 @@
+<p data-sly-test="${wcmmode.edit}" data-emptytext="Tutorial :Tutorial Component." class="cq-placeholder"></p>
+<sly data-sly-use.helloWorldModel="com.lhotse.core.models.TutorialModel"></sly>
+
+<h2>Resource Name : ${helloWorldModel.resName}</h2>
+
+<sly data-sly-test="${helloWorldModel.title}">
+    <h4> Resource Title : ${helloWorldModel.title}</h4>
+</sly>
+<sly data-sly-test="${helloWorldModel.subTitle}">
+    <h4> Resource Sub Title : ${helloWorldModel.subTitle}</h4>
+</sly>
+<p> Resource Path : ${helloWorldModel.resPath}</p>
