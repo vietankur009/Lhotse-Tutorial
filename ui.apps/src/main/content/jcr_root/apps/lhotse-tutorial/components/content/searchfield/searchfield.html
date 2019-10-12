@@ -1,0 +1,11 @@
+<p data-sly-test="${wcmmode.edit}" data-emptytext="[Search Field Component]" class="cq-placeholder"></p>
+<sly data-sly-use.searchField="com.lhotse.core.models.SearchField"></sly>
+
+<p>${searchField.name}</p>
+<sly data-sly-test = "${searchField.path}">
+    <p><a href="${searchField.path}">page</a></p>
+</sly>
+
+
+
+

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/conf/lhotse-tutorial"/>
+    <filter root="/conf/lhotse-tutorial" mode="merge"/>
     <filter root="/content/lhotse-tutorial" mode="merge"/>
-    <filter root="/content/dam/lhotse-tutorial"/>
+    <filter root="/content/dam/lhotse-tutorial" mode="merge"/>
 </workspaceFilter>
