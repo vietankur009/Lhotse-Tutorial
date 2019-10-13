@@ -23,8 +23,6 @@ public class SearchField {
     @Inject
     private String path;
 
-    private String var;
-
     @PostConstruct
     public void init() {
         if (path == null) {

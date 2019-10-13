@@ -1,0 +1,60 @@
+<p data-sly-test="${wcmmode.edit}" data-emptytext="[Image Component]" class="cq-placeholder"></p>
+<sly data-sly-use.img="com.lhotse.core.models.ImageComp"></sly>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"></sly>
+<sly data-sly-call="${clientlib.css @ categories='imageComp.imageCp'}"></sly>
+
+<!--<p>${img.resName}</p>
+<p>${img.resPath}</p>-->
+<!--<p>${img.resPageName}</p>
+<p>${img.resPagePath}</p>-->
+
+<div class="container">
+    <div class="row body-center ">
+
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 margin-top-25 text-align-right logo-image img-position">
+            <img src=${img.fileReference} class="img-circle" alt="evi image" width="325" height="325">
+        </div>
+
+        <div class="col-xs-12 col-sm-1 col-md-2 col-lg-3 "></div>
+
+        <div class="col-sm-2 col-md-1 col-lg-2"></div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 ">
+            <div class="margin-top-10"><label><h2>Title</h2></label>
+                <sly data-sly-test.tit ="${img.title}"><p>${img.title}</p></sly>
+                <sly data-sly-test ="${!tit}"><p>! Huh, How do you feel ,if your parents didn't gave you a name . <br> Define a suitable title</p></sly>
+            </div>
+
+            <div class="margin-top-10"><label><h2>Subtitle</h2></label>
+                <sly data-sly-test.sub = "${img.subtitle}"><p>${img.subtitle}</p></sly>
+                <sly data-sly-test = "${!sub}"><p>! Oh , Just Define a Subtitle</p></sly>
+            </div>
+
+            <div class="margin-top-10"><label><h2>Description</h2></label>
+                <sly data-sly-test = "${img.description}"><p>${img.description}</p></sly>
+            </div>
+
+            <div class="margin-top-10" >
+                <button type="button"><a href="${img.url}">${img.label}</a></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<sly data-sly-call="${clientlib.js @ categories='imageComp.imageCp'}"></sly>
+   <!-- <img src=${imageComp.fileReference} alt="no image" width="200px" height="200px">
+
+    <sly data-sly-test = "${img.title}">
+        <p>${img.title}</p>
+    </sly>
+
+    <sly data-sly-test = "${img.subtitle}">
+        <p>${img.subtitle}</p>
+    </sly>
+
+    <sly data-sly-test = "${img.description}">
+        <p>${img.description}</p>
+    </sly>
+
+    <button type="button"><a href="${img.url}">${img.label}</a></button>-->
