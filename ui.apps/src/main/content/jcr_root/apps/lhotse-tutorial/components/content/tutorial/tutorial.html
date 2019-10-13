@@ -18,3 +18,23 @@
 <p class="description"> Resource Path : ${helloWorldModel.resPath}</p>
 
 <!--JS file should come after HTML-->
+
+<h2> Path : <span class="description">${resource.path}</span></h2>
+
+<h2> Page Path : <span class="description">${currentPage.title}</span></h2>
+
+
+<ul>
+    <li data-sly-repeat="${helloWorldModel.children}">
+        ${item}
+    </li>
+
+</ul>
+
+<ul>
+    <sly data-sly-list="${helloWorldModel.children}">
+        <li>${item}</li>
+    </sly>
+</ul>
+
+
