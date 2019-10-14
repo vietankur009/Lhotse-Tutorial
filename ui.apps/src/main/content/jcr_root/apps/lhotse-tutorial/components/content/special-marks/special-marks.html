@@ -1,0 +1,10 @@
+<p data-sly-test="${wcmmode.edit}" data-emptytext="Tutorial :Speial Mark." class="cq-placeholder"></p>
+<sly data-sly-use.marks="com.lhotse.core.models.SpecialMarks"></sly>
+
+<h1>First Name : ${marks.firstName}</h1>
+
+<h2>Middle Name : ${marks.middleName}</h2>
+
+<h3>Last Name : ${marks.lastName}</h3>
+
+<p>Link URL : ${marks.linkURL} @context='uri'</p>
