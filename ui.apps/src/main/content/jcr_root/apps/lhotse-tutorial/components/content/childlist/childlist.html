@@ -1,0 +1,27 @@
+<p data-sly-test="${wcmmode.edit}" data-emptytext="Child List Component." class="cq-placeholder"></p>
+<sly data-sly-use.cl="com.lhotse.core.models.ChildList"></sly>
+
+<!--Add Client lib template-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"></sly>
+<!--Call Client lib according to your need.-->
+<sly data-sly-call="${clientlib.css @ categories='childlist.childLi'}"></sly>
+
+<h3>Text : ${cl.text}</h3>
+<h3>Subtitle : ${cl.subtitle}</h3>
+<h3>Resource Type : ${cl.sling_resourceType}</h3>
+
+<ul>
+    <li data-sly-repeat="${cl.children}">
+        ${item}
+    </li>
+
+</ul>
+
+<ul>
+    <sly data-sly-list="${cl.children}">
+        <li>${item}</li>
+    </sly>
+</ul>
+
+
+<sly data-sly-call="${clientlib.js @ categories='childlist.childLi'}"></sly>

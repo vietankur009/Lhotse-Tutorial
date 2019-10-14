@@ -19,13 +19,6 @@ public class ImageComp {
 
     private String resPath;*/
 
-   /* @Self
-    private Page page;
-
-    private String resPageName;
-
-    private String resPagePath;*/
-
     @Inject
     private String title;
 
@@ -49,9 +42,6 @@ public class ImageComp {
         /*resName = resource.getName();
         resPath = resource.getPath();*/
 
-        /*resPageName = page.getName();
-        resPagePath = page.getPath();*/
-
         if (url == null) {
             return;
         }
@@ -63,18 +53,6 @@ public class ImageComp {
             }
         }
     }
-
-    /*public Page getPage() {
-         return page;
-    }
-
-    public String getResPageName() {
-        return resPageName;
-    }
-
-    public String getResPagePath() {
-        return resPagePath;
-    }*/
 
    /* public Resource getResource() {
         return resource;
