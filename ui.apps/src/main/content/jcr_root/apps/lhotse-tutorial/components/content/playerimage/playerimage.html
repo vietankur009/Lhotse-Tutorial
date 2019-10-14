@@ -1,0 +1,55 @@
+<p data-sly-test="${wcmmode.edit}" data-emptytext="Tutorial :Player Image." class="cq-placeholder"></p>
+<sly data-sly-use.image="com.lhotse.core.models.PlayerImage"></sly>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"></sly>
+
+<sly data-sly-call="${clientlib.css @ categories='playerimage.image'}"></sly>
+<!--<a href ="http://google.com"><img src="${image.fileReference}" height="200px" width="200px"></a>-->
+
+<div class="container">
+    <div class="row body-center ">
+
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 ">
+            <img src=${image.fileReference} class="img-circle" alt="evi image" width="325" height="325">
+        </div>
+
+        <div class="col-xs-12 col-sm-1 col-md-2 col-lg-3 "></div>
+
+        <div class="col-xs-12 col-sm-8 col-md-7 col-lg-7 ">
+            <div class="margin-top-10"><label><h2>First Name</h2></label>
+                <sly data-sly-test.tit ="${image.firstName}"><p>${image.firstName}</p></sly>
+
+            </div>
+
+            <div class="margin-top-10"><label><h2>Middle Name</h2></label>
+                <sly data-sly-test.sub = "${image.middleName}"><p>${image.middleName}</p></sly>
+
+            </div>
+
+            <div class="margin-top-10"><label><h2>Last Name</h2></label>
+                <sly data-sly-test = "${image.lastName}"><p>${image.lastName}</p></sly>
+            </div>
+
+            <div class="margin-top-10"><label><h2>Link URL</h2></label>
+                <sly data-sly-test = "${image.linkURL}"><p>${image.linkURL}</p></sly>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!--
+<h1>First Name : ${image.firstName}</h1>
+
+<h2>Middle Name : ${image.middleName}</h2>
+
+<h3>Last Name : ${image.lastName}</h3>
+
+<p>Link URL : ${image.linkURL}</p>
+-->
+
+
+
+<sly data-sly-call="${clientlib.js @ categories='playerimage.image'}"></sly>
